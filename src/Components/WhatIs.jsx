@@ -3,7 +3,7 @@ import React from "react";
 
 export default function WhatIs() {
   return (
-    <Container maxWidth="lg" className="whatIsContainer">
+    <Container maxWidth="false" className="whatIsContainer">
       <h1>What is school</h1>
       <Grid container spacing={2}>
         <Grid xs={12} sm={12} md={4} className="whatIsCard">

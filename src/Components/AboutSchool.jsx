@@ -3,7 +3,7 @@ import React from "react";
 
 export default function AboutSchool() {
   return (
-    <Container className="aboutSchoolContainer">
+    <Container className="aboutSchoolContainer" maxWidth="false">
       <h1 className="aboutSchoolH1">Does this school ok?</h1>
       <Grid container>
         <Grid xs={12} sm={12} md={6} className="textGrid">

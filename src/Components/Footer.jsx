@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <Container className="footerContainer">
+    <Container className="footerContainer" maxWidth="false">
       <Grid container>
         <Grid xs={12} className="logoFooter">
           <h2>Logo</h2>

@@ -46,7 +46,7 @@ export default function Faq() {
     setExpanded(newExpanded ? panel : false);
   };
   return (
-    <Container className="faqContainer">
+    <Container className="faqContainer" maxWidth="false">
       <h1>FAQ</h1>
       <Grid container>
         <Grid xs={12} md={6}>

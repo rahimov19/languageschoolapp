@@ -24,6 +24,7 @@ export default function TopBanner() {
   };
   return (
     <Container
+      maxWidth="false"
       className="bannerContainer"
       style={{
         background: `url(${imageBackgrounds[selectedLanguage]})`,
