@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import CssBaseline from "@mui/material/CssBaseline";
+import "./sass/index.css";
+import NavigationBar from "./Components/NavigationBar";
+import TopBanner from "./Components/TopBanner";
+import WhatIs from "./Components/WhatIs";
+import AboutSchool from "./Components/AboutSchool";
+import Footer from "./Components/Footer";
+import Faq from "./Components/Faq";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CssBaseline enableColorScheme>
+        <NavigationBar />
+        <TopBanner />
+        <WhatIs />
+        <AboutSchool />
+        <Faq />
+        <Footer />
+      </CssBaseline>
     </div>
   );
 }

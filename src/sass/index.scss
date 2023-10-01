@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@400;600;800&family=Nunito:ital,wght@0,400;0,600;0,800;1,400;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+:root {
+  --background-color: #ffffff;
+  --background-light: #ecefff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --primary-color: #ff588c;
+  --secondary-bg-color: #ff8c30;
+  --text-color: #0a0a0a;
+  --text-light: #575757;
+  --font-size: 16px;
+  --animation-speed: 1;
+  --main-button-color: #2e30f5;
+  --hover-button-color: #0428d1;
+  --icon-color: #aebac1;
+}
+.navbar {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+}
+.navbar_items {
+  color: #0a0a0a !important;
+}
+.css-1oqqzyl-MuiContainer-root {
+  max-width: 100% !important;
+}
+.bannerContainer {
+  width: 100vh;
+  height: 75vh;
+  // background: url("https://multimedia-english.com/recursos/editor/15.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex !important;
+  justify-content: flex-start;
+  padding-left: 15% !important;
+  align-items: center;
+  color: var(--background-light);
+  font-size: 1.3em;
+  animation: mymove 30s infinite;
+  transition: background-image 1s ease-in-out;
+  transform: background-image scale(1.2);
+
+  .gridBanner {
+    p {
+      margin-block: 0.5em;
+    }
+  }
+}
+@keyframes mymove {
+  50% {
+    background-position: center;
+  }
+}
+.languageSelect {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row !important;
+  height: 100%;
+  div {
+    width: 100%;
+    // margin-right: 2em;
+  }
+  button {
+    width: 20em;
+    margin-left: 1em;
+    height: 4em;
+  }
+}
+.whatIsContainer {
+  max-width: 100%;
+  padding-inline: 15% !important;
+  margin-block: 1em;
+
+  h1 {
+    text-align: center;
+    margin-block: 1em;
+  }
+}
+.whatIsCard {
+  margin-top: 1em;
+  font-size: 1.2em;
+  img {
+    width: 100%;
+    border-radius: 15px;
+    padding-right: 1em;
+  }
+}
+.aboutSchoolH1 {
+  text-align: center;
+  margin-block: 1em;
+}
+.css-1oqqzyl-MuiContainer-root {
+  padding: 0;
+}
+.aboutSchoolContainer {
+  background-color: #dadee01f;
+  padding-inline: 15% !important;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  .textGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  div {
+    margin-block: 1em;
+    font-size: 1.2em;
+  }
+  .aboutSchoolImg {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+}
+.aboutSchoolContainer::after {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  background-image: url(/public/waves.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 1;
+  z-index: -1;
+}
+.footerContainer {
+  color: #ecefff;
+  padding-inline: 10% !important;
+  margin-block: 1em;
+  padding-block: 1em;
+  background: rgb(255, 88, 140);
+  background: linear-gradient(
+    302deg,
+    rgba(255, 88, 140, 1) 0%,
+    rgba(255, 140, 48, 0.8) 50%,
+    rgba(46, 48, 245, 1) 100%
+  );
+  .footerMenu div {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
+.faqContainer {
+  margin-block: 1em;
+  padding-block: 1em;
+  padding-inline: 15% !important;
+
+  h1 {
+    margin-block: 0.5em;
+  }
+  img {
+    object-fit: cover;
+    width: 25em;
+    height: 25em;
+    border-radius: 50%;
+  }
+}
+.accordeonTopClosed {
+  background: rgb(255, 88, 140);
+  background: linear-gradient(
+    302deg,
+    rgba(255, 88, 140, 0.2) 0%,
+    rgba(255, 140, 48, 0.2) 50%,
+    rgba(46, 48, 245, 0.2) 100%
+  ) !important;
+  color: #0a0a0a !important;
+  box-shadow: #575757;
+}
+.accordeonTop {
+  background: rgb(255, 88, 140);
+  background: linear-gradient(
+    302deg,
+    rgba(255, 88, 140, 1) 0%,
+    rgba(255, 140, 48, 1) 50%,
+    rgba(46, 48, 245, 1) 100%
+  ) !important;
+  color: #ffffff !important;
+  box-shadow: #575757;
+}
