@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -7,14 +8,18 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
+
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import LanguageIcon from "@mui/icons-material/Language";
+import { useDispatch } from "react-redux";
+import { switchLanguageAction } from "../Redux/actions";
 
 export default function NavigationBar() {
+  const dispatch = useDispatch();
+  const [language, setLanguage] = useState("ru");
   const pages = ["Products", "Pricing", "Blog"];
   const settings = ["English", "Russian", "Tajik", "French"];
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -34,6 +39,10 @@ export default function NavigationBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  useEffect(() => {
+    dispatch(switchLanguageAction(language));
+  }, [language]);
   return (
     <AppBar position="static" className="navbar">
       <Container maxWidth="xl">
@@ -150,7 +159,12 @@ export default function NavigationBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography
+                    textAlign="center"
+                    onClick={() => setLanguage(setting)}
+                  >
+                    {setting}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>

@@ -145,7 +145,16 @@ export default function Faq() {
             </Accordion>
           </div>
         </Grid>
-        <Grid xs={12} md={6} sx={{ display: "flex", justifyContent: "center" }}>
+        <Grid
+          xs={12}
+          md={6}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            mt: { xs: 2, md: 0 },
+            width: { xs: 100, md: 1 / 2, lg: 100 },
+          }}
+        >
           <img
             src="https://www.wgu.edu/content/dam/web-sites/blog-newsroom/blog/images/national/2022/portrait-of-female-teacher-in-classroom.png"
             alt=""
