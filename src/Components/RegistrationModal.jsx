@@ -7,6 +7,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import emailjs from "@emailjs/browser";
 
 import {
   Box,
@@ -33,6 +34,7 @@ export default function RegistrationModal() {
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const [level, setLevel] = useState("");
   const [open, setOpen] = React.useState(false);
+  const [email, setEmail] = useState("");
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -41,7 +43,8 @@ export default function RegistrationModal() {
     setOpen(false);
   };
   const submitHandle = () => {
-    console.log({ name, surname, age, selectedLanguage });
+    console.log({ name, surname, age, selectedLanguage, level, email });
+    sendEmail();
     handleClose();
   };
   let theme = createTheme({});
@@ -61,11 +64,24 @@ export default function RegistrationModal() {
       }),
     },
   });
-
+  const sendEmail = async () => {
+    const form = { name, surname, age, selectedLanguage, level, email };
+    const res = await emailjs.send(
+      "service_2xifqab",
+      "template_8npbce9",
+      form,
+      "EtpBk6vRqgypts-Z4"
+    );
+    if (res.status === 200) {
+      console.log(res);
+    } else {
+      console.log("Something went wrong!");
+    }
+  };
   return (
     <ThemeProvider theme={theme}>
       <>
-        <button className="bn29" onClick={handleClickOpen}>
+        <button className="bn5" onClick={handleClickOpen}>
           Start Learning
         </button>
         <BootstrapDialog
@@ -113,6 +129,17 @@ export default function RegistrationModal() {
               />{" "}
             </Box>
             <Box className="formBox">
+              <TextField
+                color="fish"
+                required
+                fullWidth
+                id="outlined-required"
+                label="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </Box>
+            <Box className="formBox">
               {" "}
               <TextField
                 color="fish"
@@ -121,7 +148,13 @@ export default function RegistrationModal() {
                 id="outlined-required"
                 label="Age"
                 value={age}
-                onChange={(e) => setAge(e.target.value)}
+                onChange={(e) => {
+                  const re = /^[0-9\b]+$/;
+
+                  if (e.target.value === "" || re.test(e.target.value)) {
+                    setAge(e.target.value);
+                  }
+                }}
               />
             </Box>
             <Box className="formBox">

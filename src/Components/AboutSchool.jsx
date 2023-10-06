@@ -1,40 +1,43 @@
 import { Container, Grid } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function AboutSchool() {
   const [rerender, setRerender] = useState(true);
-  let observerRight = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("slide-right");
-        setRerender(!rerender);
-      } else {
-        entry.target.classList.remove("slide-right");
-        setRerender(!rerender);
-      }
+  useEffect(() => {
+    let observerRight = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("slide-right");
+          console.log(".");
+          setRerender(!rerender);
+        } else {
+          entry.target.classList.remove("slide-right");
+          setRerender(!rerender);
+        }
+      });
     });
-  });
-  const listRight = document.querySelectorAll(".right");
-  listRight.forEach((el) => {
-    observerRight.observe(el);
-  });
+    const listRight = document.querySelectorAll(".right");
+    listRight.forEach((el) => {
+      observerRight.observe(el);
+    });
 
-  let observerLeft = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("slide-left");
-        // setRerender(!rerender);
-        console.log(".");
-      } else {
-        entry.target.classList.remove("slide-left");
-        // setRerender(!rerender);
-      }
+    let observerLeft = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log(".");
+          entry.target.classList.add("slide-left");
+          setRerender(!rerender);
+        } else {
+          entry.target.classList.remove("slide-left");
+          setRerender(!rerender);
+        }
+      });
     });
-  });
-  const listLeft = document.querySelectorAll(".left");
-  listLeft.forEach((el) => {
-    observerLeft.observe(el);
-  });
+    const listLeft = document.querySelectorAll(".left");
+    listLeft.forEach((el) => {
+      observerLeft.observe(el);
+    });
+  }, []);
 
   return (
     <Container className="aboutSchoolContainer" maxWidth="false">

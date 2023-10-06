@@ -35,7 +35,9 @@ export default function Footer() {
         <Grid xs={6} md={4} xl={2} className="footerMenu">
           <div>
             <h4>Contacts</h4> <a href="asd">FAQ</a> <a href="asd">Contact Us</a>{" "}
-            <Button>Become a teacher</Button>
+            <Button className="bn5" sx={{ mt: 2 }}>
+              Become a teacher
+            </Button>
           </div>
         </Grid>
         <Grid xs={12} md={6} lg={4} mt={2}>
