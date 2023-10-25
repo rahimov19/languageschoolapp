@@ -7,6 +7,7 @@ import AboutSchool from "./Components/AboutSchool";
 import Footer from "./Components/Footer";
 import Faq from "./Components/Faq";
 import Map from "./Components/Map";
+import BuyCredits from "./Components/BuyCredits";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <TopBanner />
         <WhatIs />
         <AboutSchool />
+        <BuyCredits />
         <Map />
         <Faq />
         <Footer />

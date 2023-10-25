@@ -40,19 +40,18 @@ export default function AboutSchool() {
   }, []);
 
   return (
-    <Container className="aboutSchoolContainer" maxWidth="false">
-      <h1 className="aboutSchoolH1">Does this school ok?</h1>
+    <Container className="aboutSchoolContainer" maxWidth="false" id="aboutUs">
+      <h1 className="aboutSchoolH1">Why Melting Pot?</h1>
       <Grid container>
         <Grid xs={12} sm={12} md={6} className="right textGrid ">
-          <h3>Some text 111</h3>
-          <p>We are making this text bla bla bla</p>
+          <h3>Small groups</h3>
+          <p>
+            We offering small groups (max 4 person) to give most of teachers
+            attention
+          </p>
         </Grid>
         <Grid xs={12} sm={12} md={6} className="right ">
-          <img
-            className="aboutSchoolImg"
-            src="https://www.fsagames.com/wp-content/uploads/2019/07/shutterstock_594891590.jpg"
-            alt=""
-          />
+          <img className="aboutSchoolImg" src="/smallGroup.jpg" alt="" />
         </Grid>
         <Grid
           xs={12}
@@ -61,22 +60,20 @@ export default function AboutSchool() {
           className="left slide-left "
           sx={{ order: { xs: 3, md: 2 } }}
         >
-          <img
-            className="aboutSchoolImg"
-            src="https://www.fsagames.com/wp-content/uploads/2019/07/shutterstock_594891590.jpg"
-            alt=""
-          />
+          <img className="aboutSchoolImg" src="/credit.jpg" alt="" />
         </Grid>
         <Grid
-          ml={2}
           xs={12}
           sm={12}
-          md={5}
+          md={6}
           className="textGrid left slide-left "
-          sx={{ order: { xs: 2, md: 3 } }}
+          sx={{ order: { xs: 2, md: 3 }, pr: 2 }}
         >
-          <h3>Some text222</h3>
-          <p>We are making this text bla bla bla</p>
+          <h3>Native speakers</h3>
+          <p>
+            All our teacher are native speakers, which will give you all small
+            details of language to learn
+          </p>
         </Grid>
 
         <Grid
@@ -84,10 +81,13 @@ export default function AboutSchool() {
           sm={12}
           md={6}
           className="textGrid right"
-          sx={{ order: { xs: 1, md: 2 } }}
+          sx={{ order: { xs: 1, md: 2 }, pl: 2 }}
         >
-          <h3>Some text333</h3>
-          <p>We are making this text bla bla bla</p>
+          <h3>Credit scoring</h3>
+          <p>
+            No monthly fee, only credits that you can spend on different type of
+            lessons (individual lesson, group lesson or interactive lesson)
+          </p>
         </Grid>
         <Grid
           xs={12}
@@ -96,11 +96,7 @@ export default function AboutSchool() {
           className=" right"
           sx={{ order: { xs: 1, md: 3 } }}
         >
-          <img
-            className="aboutSchoolImg"
-            src="https://www.fsagames.com/wp-content/uploads/2019/07/shutterstock_594891590.jpg"
-            alt=""
-          />
+          <img className="aboutSchoolImg" src="/native.jpg" alt="" />
         </Grid>
       </Grid>
     </Container>

@@ -46,7 +46,7 @@ export default function Faq() {
     setExpanded(newExpanded ? panel : false);
   };
   return (
-    <Container className="faqContainer" maxWidth="false">
+    <Container className="faqContainer" maxWidth="false" id="faq">
       <h1>FAQ</h1>
       <Grid container>
         <Grid xs={12} md={6}>
@@ -62,15 +62,15 @@ export default function Faq() {
                 aria-controls="panel1d-content"
                 id="panel1d-header"
               >
-                <Typography>What is going to happen</Typography>
+                <Typography>
+                  What languages do you offer at your language school?
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget.
+                  We offer a wide range of languages, including English,
+                  Russian, French, German, and sometimes others too. Contact us
+                  for a full list of languages available.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -85,15 +85,15 @@ export default function Faq() {
                 aria-controls="panel2d-content"
                 id="panel2d-header"
               >
-                <Typography>Where do i learn</Typography>
+                <Typography>
+                  Are your language instructors qualified and experienced?
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget.
+                  Yes, all our instructors are highly qualified and experienced
+                  language professionals. They are native speakers and are
+                  dedicated to helping you achieve your language learning goals.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -108,15 +108,16 @@ export default function Faq() {
                 aria-controls="panel3d-content"
                 id="panel3d-header"
               >
-                <Typography>How many people will be in groups</Typography>
+                <Typography>
+                  What is the class size for your language courses?
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget.
+                  We keep our class sizes small to ensure personalized
+                  attention. Classes typically up to 4 students, as well as
+                  individual lessons, allowing for interactive and effective
+                  learning.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -131,15 +132,15 @@ export default function Faq() {
                 aria-controls="panel3d-content"
                 id="panel3d-header"
               >
-                <Typography>Who will be my teacher</Typography>
+                <Typography>
+                  What materials and textbooks are required for the courses?
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget.
+                  Course materials and textbooks are typically provided as part
+                  of the course fee. You may need to bring a notebook and
+                  writing materials for some classes.
                 </Typography>
               </AccordionDetails>
             </Accordion>

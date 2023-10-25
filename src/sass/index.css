@@ -208,8 +208,7 @@ body {
 .mapGrid img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
-  aspect-ratio: 1/1;
+  height: 25em;
 }
 
 .animate {
@@ -405,4 +404,16 @@ body {
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+
+.logoNavbar {
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.logoFooter img {
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=index.css.map */

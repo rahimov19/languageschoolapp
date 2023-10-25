@@ -14,13 +14,10 @@ import RegistrationModal from "./RegistrationModal";
 export default function TopBanner() {
   const [selectedLanguage, setSelectedLanguage] = useState("english");
   const imageBackgrounds = {
-    english: "https://www.england.de/images/headers/london/london-england.jpg",
-    german:
-      "https://www.visitberlin.de/system/files/styles/visitberlin_hero_visitberlin_desktop_2x/private/image/iStock_000049394172_istock.com_Mapics_DL_PPT_0.jpg?h=5f29f7b4&itok=f6oEBbNz",
-    russian:
-      "https://www.state.gov/wp-content/uploads/2018/11/Russia-2499x1406.jpg",
-    french:
-      "https://study-eu.s3.amazonaws.com/uploads/image/path/97/wide_fullhd_france-paris-eiffel-tower.jpg",
+    english: "/england.jpg",
+    german: "/germany.jpg",
+    russian: "/russia.jpg",
+    french: "/france.jpg",
   };
   let theme = createTheme({});
   theme = createTheme(theme, {

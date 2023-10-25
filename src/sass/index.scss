@@ -225,8 +225,9 @@ body {
   justify-content: center;
   img {
     object-fit: cover;
-    width: 100%;
-    aspect-ratio: 1/1;
+    // width: 100%;
+    height: 25em;
+    // aspect-ratio: 1/1;
   }
 }
 
@@ -490,4 +491,14 @@ body {
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+.logoNavbar {
+  width: 50px;
+  object-fit: cover;
+}
+.logoFooter {
+  img {
+    width: 100px;
+    object-fit: cover;
+  }
 }
