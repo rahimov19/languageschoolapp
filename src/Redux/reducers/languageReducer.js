@@ -2,7 +2,7 @@ import { SWITCH_LANGUAGE } from "../actions";
 import { SAVE_LANGUAGES } from "../actions";
 
 const initialState = {
-  currentLanguage: "ru",
+  currentLanguage: "Russian",
   languages: {},
 };
 

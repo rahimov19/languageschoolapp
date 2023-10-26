@@ -10,8 +10,45 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import StarIcon from "@mui/icons-material/Star";
 import React, { useState } from "react";
 import RegistrationModal from "./RegistrationModal";
+import { useSelector } from "react-redux";
 
 export default function TopBanner() {
+  const languagePack = {
+    Russian: {
+      learnLanguage: "Изучить язык",
+      Effective: "Эффективно",
+      Fast: "Быстро",
+      Comfortable: "Удобно",
+      selectLanguage: "Выберите язык обучения",
+      english: "Английский",
+      russian: "Русский",
+      german: "Немецкий",
+      french: "Французский",
+    },
+    Tajik: {
+      learnLanguage: "Забонро ёд гиред",
+      Effective: "Эътибор",
+      Fast: "Тез",
+      Comfortable: "Бароҳат",
+      selectLanguage: "Забонро интихоб кунед",
+      english: "Англисй",
+      russian: "Русй",
+      german: "Олмонй",
+      french: "Фаронсавй",
+    },
+    English: {
+      learnLanguage: "Learn language",
+      Effective: "Effective",
+      Fast: "Fast",
+      Comfortable: "Comfortable",
+      selectLanguage: "Select Language",
+      english: "English",
+      russian: "Russian",
+      german: "German",
+      french: "French",
+    },
+  };
+  const language = useSelector((state) => state.languages.currentLanguage);
   const [selectedLanguage, setSelectedLanguage] = useState("english");
   const imageBackgrounds = {
     english: "/england.jpg",
@@ -50,18 +87,22 @@ export default function TopBanner() {
         }}
       >
         <Grid xs={12} md={8} lg={6} className="gridBanner" item>
-          <h2>Learn language</h2>
+          <h2>{languagePack[language].learnLanguage}</h2>
           <Grid sx={{ display: "flex", alignItems: "center" }}>
             <StarIcon sx={{ mr: 1 }} />
-            <p sx={{ textAlign: "center" }}>Offline</p>
+            <p sx={{ textAlign: "center" }}>
+              {languagePack[language].Effective}
+            </p>
           </Grid>
           <Grid sx={{ display: "flex", alignItems: "center" }}>
             <StarIcon sx={{ mr: 1 }} />
-            <p sx={{ textAlign: "center" }}>individual</p>
+            <p sx={{ textAlign: "center" }}>{languagePack[language].Fast}</p>
           </Grid>{" "}
           <Grid sx={{ display: "flex", alignItems: "center" }}>
             <StarIcon sx={{ mr: 1 }} />
-            <p sx={{ textAlign: "center" }}> free test lesson</p>
+            <p sx={{ textAlign: "center" }}>
+              {languagePack[language].Comfortable}
+            </p>
           </Grid>
           <Grid className="languageSelect" container>
             <Grid xs={12} md={8} sx={{ mb: 2 }} item>
@@ -80,7 +121,7 @@ export default function TopBanner() {
                 }}
               >
                 <InputLabel id="demo-simple-select-label">
-                  Select Language
+                  {languagePack[language].selectLanguage}
                 </InputLabel>
                 <Select
                   labelId="demo-simple-select-label"

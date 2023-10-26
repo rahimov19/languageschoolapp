@@ -6,6 +6,7 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import { useSelector } from "react-redux";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -40,6 +41,42 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function Faq() {
+  const languagePack = {
+    Russian: {
+      FAQ: " ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
+      q1: "Какие языки вы предлагаете в своей языковой школе?",
+      a1: "Мы предлагаем широкий спектр языков, включая английский, русский, французский, немецкий, а иногда и другие. Свяжитесь с нами, чтобы получить полный список предлагаемых языков",
+      q2: "Являются ли ваши преподаватели квалифицированными и опытными?",
+      a2: "Да, все наши преподаватели - высококвалифицированные и опытные специалисты в области иностранных языков. Они являются носителями языка и стремятся помочь вам достичь ваших целей в изучении языка",
+      q3: "Каков размер группы на ваших языковых курсах?",
+      a3: "Мы поддерживаем небольшой размер класса, чтобы обеспечить индивидуальный подход. В классах обычно бывает до 4 студентов, а также проводятся индивидуальные занятия, что обеспечивает интерактивное и эффективное обучение.",
+      q4: "Какие материалы и учебники необходимы для изучения курсов?",
+      a4: "Материалы и учебники обычно предоставляются в рамках оплаты курса. На некоторые занятия вам может потребоваться принести тетрадь и письменные принадлежности",
+    },
+    Tajik: {
+      FAQ: "Саволхои мепурсидаги",
+      q1: "Шумо дар мактаби забоншиносии худ кадом забонҳоро пешниҳод мекунед?",
+      a1: "Мо доираи васеи забонҳоро пешниҳод мекунем, аз ҷумла англисӣ, русӣ, фаронсавӣ, олмонӣ ва баъзан дигарон низ. Барои гирифтани рӯйхати пурраи забонҳои дастрас бо мо тамос гиред.",
+      q2: "Оё устодони забони шумо соҳибихтисос ва ботаҷрибаанд?",
+      a2: "Бале, ҳамаи омӯзгорони мо мутахассисони баландихтисос ва ботаҷрибаи забон мебошанд. Онҳо забони модарӣ мебошанд ва барои расидан ба ҳадафҳои омӯзиши забонатон кӯмак мекунанд.",
+      q3: "Ҳаҷми синф барои курсҳои забони шумо чанд аст?",
+      a3: "Мо андозаи синфҳои худро хурд нигоҳ медорем, то таваҷҷӯҳи шахсиро таъмин кунем. Синфҳо одатан то 4 донишҷӯ, инчунин дарсҳои инфиродӣ, ки барои омӯзиши интерактивӣ ва муассир имкон медиҳанд.",
+      q4: "Барои курсҳо кадом мавод ва китобҳои дарсӣ лозиманд?",
+      a4: "Маводҳои курсӣ ва китобҳои дарсӣ маъмулан ҳамчун як қисми пардохти курс таъмин карда мешаванд. Шояд шумо лозим меояд, ки барои баъзе дарсҳо дафтар ва маводи хаттӣ биёред.",
+    },
+    English: {
+      FAQ: "FAQ",
+      q1: "What languages do you offer at your language school?",
+      a1: "We offer a wide range of languages, including English, Russian, French, German, and sometimes others too. Contact us for a full list of languages available.",
+      q2: "Are your language instructors qualified and experienced?",
+      a2: "Yes, all our instructors are highly qualified and experienced language professionals. They are native speakers and are dedicated to helping you achieve your language learning goals.",
+      q3: "What is the class size for your language courses?",
+      a3: "We keep our class sizes small to ensure personalized attention. Classes typically up to 4 students, as well as individual lessons, allowing for interactive and effective learning.",
+      q4: "What materials and textbooks are required for the courses?",
+      a4: "Course materials and textbooks are typically provided as part of the course fee. You may need to bring a notebook and writing materials for some classes.",
+    },
+  };
+  const language = useSelector((state) => state.languages.currentLanguage);
   const [expanded, setExpanded] = React.useState("panel1");
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -47,7 +84,7 @@ export default function Faq() {
   };
   return (
     <Container className="faqContainer" maxWidth="false" id="faq">
-      <h1>FAQ</h1>
+      <h1>{languagePack[language].FAQ}</h1>
       <Grid container>
         <Grid xs={12} md={6}>
           <div>
@@ -62,16 +99,10 @@ export default function Faq() {
                 aria-controls="panel1d-content"
                 id="panel1d-header"
               >
-                <Typography>
-                  What languages do you offer at your language school?
-                </Typography>
+                <Typography>{languagePack[language].q1}</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                  We offer a wide range of languages, including English,
-                  Russian, French, German, and sometimes others too. Contact us
-                  for a full list of languages available.
-                </Typography>
+                <Typography>{languagePack[language].a1}</Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion
@@ -85,16 +116,10 @@ export default function Faq() {
                 aria-controls="panel2d-content"
                 id="panel2d-header"
               >
-                <Typography>
-                  Are your language instructors qualified and experienced?
-                </Typography>
+                <Typography>{languagePack[language].q2}</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                  Yes, all our instructors are highly qualified and experienced
-                  language professionals. They are native speakers and are
-                  dedicated to helping you achieve your language learning goals.
-                </Typography>
+                <Typography>{languagePack[language].a2}</Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion
@@ -108,17 +133,10 @@ export default function Faq() {
                 aria-controls="panel3d-content"
                 id="panel3d-header"
               >
-                <Typography>
-                  What is the class size for your language courses?
-                </Typography>
+                <Typography>{languagePack[language].q3}</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                  We keep our class sizes small to ensure personalized
-                  attention. Classes typically up to 4 students, as well as
-                  individual lessons, allowing for interactive and effective
-                  learning.
-                </Typography>
+                <Typography>{languagePack[language].a3}</Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion
@@ -132,16 +150,10 @@ export default function Faq() {
                 aria-controls="panel3d-content"
                 id="panel3d-header"
               >
-                <Typography>
-                  What materials and textbooks are required for the courses?
-                </Typography>
+                <Typography>{languagePack[language].q4}</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>
-                  Course materials and textbooks are typically provided as part
-                  of the course fee. You may need to bring a notebook and
-                  writing materials for some classes.
-                </Typography>
+                <Typography>{languagePack[language].a4}</Typography>
               </AccordionDetails>
             </Accordion>
           </div>

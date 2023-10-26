@@ -12,16 +12,24 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import LanguageIcon from "@mui/icons-material/Language";
 import { useDispatch } from "react-redux";
 import { switchLanguageAction } from "../Redux/actions";
 
 export default function NavigationBar() {
+  const languagePack = {
+    Russian: { aboutUs: "О Нас", Prices: "Цены", Contacts: "Контакты" },
+    Tajik: { aboutUs: "Дар бораи Мо", Prices: "Нарххо", Contacts: "Тамос" },
+    English: { aboutUs: "About Us", Prices: "Prices", Contacts: "Contact Us" },
+  };
   const dispatch = useDispatch();
-  const [language, setLanguage] = useState("ru");
-  const pages = ["Products", "Pricing", "Blog"];
-  const settings = ["English", "Russian", "Tajik", "French"];
+  const [language, setLanguage] = useState("Russian");
+  const pages = [
+    languagePack[language].aboutUs,
+    languagePack[language].Prices,
+    languagePack[language].Contacts,
+  ];
+  const settings = ["English", "Russian", "Tajik"];
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -44,7 +52,7 @@ export default function NavigationBar() {
     dispatch(switchLanguageAction(language));
   }, [language]);
   return (
-    <AppBar position="static" className="navbar">
+    <AppBar position="sticky" className="navbar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img src="/logo.png" alt="" className="logoNavbar" />
@@ -139,13 +147,14 @@ export default function NavigationBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography
-                    textAlign="center"
-                    onClick={() => setLanguage(setting)}
-                  >
-                    {setting}
-                  </Typography>
+                <MenuItem
+                  key={setting}
+                  onClick={() => {
+                    setLanguage(setting);
+                    handleCloseUserMenu();
+                  }}
+                >
+                  <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
             </Menu>
