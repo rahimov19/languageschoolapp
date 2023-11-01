@@ -17,6 +17,7 @@ import {
   Select,
   TextField,
 } from "@mui/material";
+import { useSelector } from "react-redux";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -28,6 +29,54 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 }));
 
 export default function RegistrationModal() {
+  const languagePack = {
+    Russian: {
+      startLearning: "Начать обучение",
+      registrationForm: "Форма регистрации",
+      submitApplication: "Отправить заявку",
+      name: "Имя",
+      surname: "Фамилия",
+      age: "Возраст",
+      selectedLanguage: "Выбранный язык",
+      level: "Уровень",
+      email: "Электронная почта",
+      english: "Английский",
+      russian: "Русский",
+      german: "Немецкий",
+      french: "Французский",
+    },
+    Tajik: {
+      startLearning: "Омӯзишро оғоз кунед",
+      registrationForm: "Шакли бақайдгирӣ",
+      submitApplication: "Пешниход кардани ариза",
+      name: "Ном",
+      surname: "Насаб",
+      age: "Синну сол",
+      selectedLanguage: "Забони интихобшуда",
+      level: "Сатҳ",
+      email: "Почтаи электронӣ",
+      english: "Англисй",
+      russian: "Русй",
+      german: "Олмонй",
+      french: "Фаронсавй",
+    },
+    English: {
+      startLearning: "Start Learning",
+      registrationForm: "Registration Form",
+      submitApplication: "Sumbit Application",
+      name: "Name",
+      surname: "Surname",
+      age: "Age",
+      selectedLanguage: "Selected Language",
+      level: "Level",
+      email: "Email",
+      english: "English",
+      russian: "Russian",
+      german: "German",
+      french: "French",
+    },
+  };
+  const language = useSelector((state) => state.languages.currentLanguage);
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [age, setAge] = useState("");
@@ -82,7 +131,7 @@ export default function RegistrationModal() {
     <ThemeProvider theme={theme}>
       <>
         <button className="bn5" onClick={handleClickOpen}>
-          Start Learning
+          {languagePack[language].startLearning}
         </button>
         <BootstrapDialog
           className="modalBox"
@@ -91,7 +140,7 @@ export default function RegistrationModal() {
           open={open}
         >
           <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-            Registration Form
+            {languagePack[language].registrationForm}
           </DialogTitle>
           <IconButton
             aria-label="close"
@@ -112,7 +161,7 @@ export default function RegistrationModal() {
                 required
                 fullWidth
                 id="outlined-required"
-                label="Name"
+                label={languagePack[language].name}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -123,7 +172,7 @@ export default function RegistrationModal() {
                 fullWidth
                 required
                 id="outlined-required"
-                label="Surname"
+                label={languagePack[language].surname}
                 value={surname}
                 onChange={(e) => setSurname(e.target.value)}
               />{" "}
@@ -134,7 +183,7 @@ export default function RegistrationModal() {
                 required
                 fullWidth
                 id="outlined-required"
-                label="Email"
+                label={languagePack[language].email}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -146,7 +195,7 @@ export default function RegistrationModal() {
                 required
                 fullWidth
                 id="outlined-required"
-                label="Age"
+                label={languagePack[language].age}
                 value={age}
                 onChange={(e) => {
                   const re = /^[0-9\b]+$/;
@@ -159,30 +208,42 @@ export default function RegistrationModal() {
             </Box>
             <Box className="formBox">
               <FormControl fullWidth color="fish">
-                <InputLabel id="demo-simple-select-label">Language</InputLabel>
+                <InputLabel id="demo-simple-select-label">
+                  {languagePack[language].selectedLanguage}
+                </InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   value={selectedLanguage}
-                  label="Language"
+                  label={languagePack[language].selectedLanguage}
                   onChange={(e) => setSelectedLanguage(e.target.value)}
                 >
-                  <MenuItem value={"English"}>English</MenuItem>
-                  <MenuItem value={"Russian"}>Russian</MenuItem>
-                  <MenuItem value={"German"}>German</MenuItem>
-                  <MenuItem value={"French"}>French</MenuItem>
+                  <MenuItem value={"English"}>
+                    {languagePack[language].english}
+                  </MenuItem>
+                  <MenuItem value={"Russian"}>
+                    {languagePack[language].russian}
+                  </MenuItem>
+                  <MenuItem value={"German"}>
+                    {languagePack[language].german}
+                  </MenuItem>
+                  <MenuItem value={"French"}>
+                    {languagePack[language].french}
+                  </MenuItem>
                 </Select>
               </FormControl>
             </Box>
             <Box className="formBox">
               {" "}
               <FormControl fullWidth color="fish">
-                <InputLabel id="demo-simple-select-label">Level</InputLabel>
+                <InputLabel id="demo-simple-select-label">
+                  {languagePack[language].level}
+                </InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   value={level}
-                  label="Level"
+                  label={languagePack[language].level}
                   onChange={(e) => setLevel(e.target.value)}
                 >
                   <MenuItem value={"A1"}>A1</MenuItem>
@@ -201,7 +262,7 @@ export default function RegistrationModal() {
               onClick={submitHandle}
               sx={{ m: 1 }}
             >
-              Sumbit Application
+              {languagePack[language].submitApplication}
             </Button>
           </DialogActions>
         </BootstrapDialog>

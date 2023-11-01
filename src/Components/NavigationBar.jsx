@@ -24,11 +24,7 @@ export default function NavigationBar() {
   };
   const dispatch = useDispatch();
   const [language, setLanguage] = useState("Russian");
-  const pages = [
-    languagePack[language].aboutUs,
-    languagePack[language].Prices,
-    languagePack[language].Contacts,
-  ];
+
   const settings = ["English", "Russian", "Tajik"];
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
@@ -99,29 +95,49 @@ export default function NavigationBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  className="navbar_items"
-                >
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseNavMenu} className="navbar_items">
+                <Typography textAlign="center" href="#whatIs">
+                  {languagePack[language].aboutUs}
+                </Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} className="navbar_items">
+                <Typography textAlign="center" href="#pricing">
+                  {languagePack[language].Prices}
+                </Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} className="navbar_items">
+                <Typography textAlign="center" href="#footer">
+                  {languagePack[language].Contacts}
+                </Typography>
+              </MenuItem>
             </Menu>
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                className="navbar_items"
-                sx={{ my: 2, display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
+            <Button
+              onClick={handleCloseNavMenu}
+              className="navbar_items"
+              href="#whatIs"
+              sx={{ my: 2, display: "block" }}
+            >
+              {languagePack[language].aboutUs}
+            </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              className="navbar_items"
+              href="#pricing"
+              sx={{ my: 2, display: "block" }}
+            >
+              {languagePack[language].Prices}
+            </Button>{" "}
+            <Button
+              onClick={handleCloseNavMenu}
+              href="#footer"
+              className="navbar_items"
+              sx={{ my: 2, display: "block" }}
+            >
+              {languagePack[language].Contacts}
+            </Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

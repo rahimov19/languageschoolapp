@@ -86,7 +86,7 @@ export default function TopBanner() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <Grid xs={12} md={8} lg={6} className="gridBanner" item>
+        <Grid xs={12} md={12} lg={12} className="gridBanner" item>
           <h2>{languagePack[language].learnLanguage}</h2>
           <Grid sx={{ display: "flex", alignItems: "center" }}>
             <StarIcon sx={{ mr: 1 }} />
@@ -118,6 +118,12 @@ export default function TopBanner() {
                   "& .MuiFormControl-root": {
                     color: "white",
                   },
+                  "& .MuiInputBase-input": {
+                    color: "white",
+                  },
+                  "& .MuiFormLabel-root": {
+                    color: "white",
+                  },
                 }}
               >
                 <InputLabel id="demo-simple-select-label">
@@ -130,10 +136,18 @@ export default function TopBanner() {
                   label="Language"
                   onChange={(e) => setSelectedLanguage(e.target.value)}
                 >
-                  <MenuItem value={"english"}>English</MenuItem>
-                  <MenuItem value={"russian"}>Russian</MenuItem>
-                  <MenuItem value={"german"}>German</MenuItem>
-                  <MenuItem value={"french"}>French</MenuItem>
+                  <MenuItem value={"english"}>
+                    {languagePack[language].english}
+                  </MenuItem>
+                  <MenuItem value={"russian"}>
+                    {languagePack[language].russian}
+                  </MenuItem>
+                  <MenuItem value={"german"}>
+                    {languagePack[language].german}
+                  </MenuItem>
+                  <MenuItem value={"french"}>
+                    {languagePack[language].french}
+                  </MenuItem>
                 </Select>
               </FormControl>
             </Grid>

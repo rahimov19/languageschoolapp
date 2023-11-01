@@ -29,7 +29,13 @@ export default function Map() {
       </Box>
       <Grid container sx={{ display: "flex", justifyContent: "center" }}>
         <Grid className="mapGrid" xs={12} md={8} lg={6} xl={5}>
-          <img src="/map.png" alt="map" />
+          <a
+            href="https://www.google.com/maps/@38.59625,68.7863696,21z"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/map.png" alt="map" />
+          </a>
         </Grid>
       </Grid>
     </Container>

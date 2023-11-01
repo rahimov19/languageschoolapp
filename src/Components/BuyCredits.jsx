@@ -55,7 +55,7 @@ const BuyCredits = () => {
   );
 
   return (
-    <Container className="center-container" sx={{ p: 2 }}>
+    <Container className="center-container" sx={{ p: 2 }} id="pricing">
       <Paper elevation={3} className="paper">
         <Typography variant="h4" gutterBottom>
           {languagePack[language].buyMore}

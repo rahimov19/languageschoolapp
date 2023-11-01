@@ -49,6 +49,11 @@ body {
   animation: mymove 40s infinite;
 
   .gridBanner {
+    background-color: #00000047;
+    text-shadow: white 1px;
+    border-radius: 25px;
+    width: 50%;
+    padding: 1em;
     p {
       margin-block: 0.5em;
     }
@@ -90,6 +95,9 @@ body {
 .whatIsCard {
   margin-top: 1em;
   font-size: 1.2em;
+  p {
+    padding-right: 0.7em !important;
+  }
   img {
     width: 100%;
     border-radius: 15px;
@@ -501,4 +509,25 @@ body {
     width: 100px;
     object-fit: cover;
   }
+}
+.socialLink {
+  img {
+    width: 35px;
+    margin-right: 0.4em;
+  }
+}
+.privacyP {
+  cursor: pointer;
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+a,
+a:visited {
+  color: black;
+}
+#aboutUs,
+#pricing,
+#faq,
+#whatIs {
+  scroll-margin-top: 70px;
 }
