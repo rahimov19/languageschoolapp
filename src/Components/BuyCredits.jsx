@@ -15,7 +15,7 @@ const BuyCredits = () => {
     Russian: {
       buyMore: "Покупайте больше, экономьте больше!",
       selectCredits: "Выберите кредитный пакет:",
-      packagePrice: "Цена пакета:",
+      packagePrice: "Цена 1 кредита:",
       infoText:
         "Приобретайте больше кредитов, чтобы сэкономить! Чем больше кредитный пакет, тем дешевле становится каждый кредит. Воспользуйтесь нашими экономичными пакетами уже сегодня.",
       Credits: "Кредит(ов)",
@@ -23,7 +23,7 @@ const BuyCredits = () => {
     Tajik: {
       buyMore: "Зиёдатар харед, бештар захира кунед!",
       selectCredits: "Бастаи кредитиро интихоб кунед:",
-      packagePrice: "Нархи баста:",
+      packagePrice: "Нархи 1 кредит:",
       infoText:
         "Барои сарфаи пул қарзҳои бештар харед! Ҳар қадаре ки бастаи кредитӣ калон бошад, ҳар як кредит ҳамон қадар арзонтар мешавад. Имрўз аз бастаҳои камхарҷи мо баҳра баред.",
       Credits: "Кредит",
@@ -31,7 +31,7 @@ const BuyCredits = () => {
     English: {
       buyMore: "Buy More, Save More!",
       selectCredits: "Select Credit Package:",
-      packagePrice: "Package Price:",
+      packagePrice: "Price for 1 Credit:",
       infoText:
         "Purchase more credits to save money! The larger the credit package, the cheaper each credit becomes. Take advantage of our cost-effective packages today.",
       Credits: "Credits",
@@ -40,10 +40,11 @@ const BuyCredits = () => {
   const language = useSelector((state) => state.languages.currentLanguage);
   const [selectedPackage, setSelectedPackage] = useState(1); // Default to the 1 credit package
   const creditPackages = [
-    { credits: 1, price: 5 },
-    { credits: 3, price: 13 },
-    { credits: 5, price: 20 },
-    { credits: 10, price: 35 },
+    { credits: "1-5", price: 200 },
+    { credits: "5-10", price: 180 },
+    { credits: "10-20", price: 150 },
+    { credits: "20-50", price: 120 },
+    { credits: "50+", price: 100 },
   ];
 
   const handleChange = (event) => {
@@ -83,7 +84,7 @@ const BuyCredits = () => {
               {languagePack[language].packagePrice}
             </Typography>
             <Typography className="package-price">
-              {`$${selectedPackageData ? selectedPackageData.price : ""}`}
+              {`${selectedPackageData ? selectedPackageData.price : ""} TJS`}
             </Typography>
           </Grid>
         </Grid>

@@ -43,7 +43,12 @@ export default function WhatIs() {
   };
   const language = useSelector((state) => state.languages.currentLanguage);
   return (
-    <Container maxWidth="false" className="whatIsContainer" id="whatIs">
+    <Container
+      maxWidth="false"
+      className="whatIsContainer"
+      id="whatIs"
+      sx={{ textAlign: { xs: "center", md: "start" } }}
+    >
       <h1>{languagePack[language].whatIsSchool}</h1>
       <Grid container spacing={2}>
         <Grid

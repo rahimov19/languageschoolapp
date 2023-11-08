@@ -76,7 +76,12 @@ export default function Footer() {
   };
   const language = useSelector((state) => state.languages.currentLanguage);
   return (
-    <Container className="footerContainer" maxWidth="false" id="footer">
+    <Container
+      className="footerContainer"
+      maxWidth="false"
+      id="footer"
+      sx={{ textAlign: { xs: "center", md: "start" } }}
+    >
       <Grid container>
         <Grid xs={12} className="logoFooter">
           <img src="/logo.png" alt="" />

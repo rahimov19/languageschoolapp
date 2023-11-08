@@ -83,7 +83,12 @@ export default function Faq() {
     setExpanded(newExpanded ? panel : false);
   };
   return (
-    <Container className="faqContainer" maxWidth="false" id="faq">
+    <Container
+      className="faqContainer"
+      maxWidth="false"
+      id="faq"
+      sx={{ textAlign: { xs: "center", md: "start" } }}
+    >
       <h1>{languagePack[language].FAQ}</h1>
       <Grid container>
         <Grid xs={12} md={6}>

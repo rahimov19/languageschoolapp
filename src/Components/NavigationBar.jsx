@@ -18,9 +18,24 @@ import { switchLanguageAction } from "../Redux/actions";
 
 export default function NavigationBar() {
   const languagePack = {
-    Russian: { aboutUs: "О Нас", Prices: "Цены", Contacts: "Контакты" },
-    Tajik: { aboutUs: "Дар бораи Мо", Prices: "Нарххо", Contacts: "Тамос" },
-    English: { aboutUs: "About Us", Prices: "Prices", Contacts: "Contact Us" },
+    Russian: {
+      aboutUs: "О Нас",
+      Prices: "Цены",
+      Contacts: "Контакты",
+      callNow: "Позвоните нам",
+    },
+    Tajik: {
+      aboutUs: "Дар бораи Мо",
+      Prices: "Нарххо",
+      Contacts: "Тамос",
+      callNow: "Ба мо занг занед",
+    },
+    English: {
+      aboutUs: "About Us",
+      Prices: "Prices",
+      Contacts: "Contact Us",
+      callNow: "Call us",
+    },
   };
   const dispatch = useDispatch();
   const [language, setLanguage] = useState("Russian");
@@ -96,19 +111,27 @@ export default function NavigationBar() {
               }}
             >
               <MenuItem onClick={handleCloseNavMenu} className="navbar_items">
-                <Typography textAlign="center" href="#whatIs">
-                  {languagePack[language].aboutUs}
-                </Typography>
+                <a href="#whatIs">
+                  {" "}
+                  <Typography textAlign="center">
+                    {languagePack[language].aboutUs}
+                  </Typography>
+                </a>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu} className="navbar_items">
-                <Typography textAlign="center" href="#pricing">
-                  {languagePack[language].Prices}
-                </Typography>
+                <a href="#pricing">
+                  {" "}
+                  <Typography textAlign="center">
+                    {languagePack[language].Prices}
+                  </Typography>
+                </a>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu} className="navbar_items">
-                <Typography textAlign="center" href="#footer">
-                  {languagePack[language].Contacts}
-                </Typography>
+                <a href="#footer">
+                  <Typography textAlign="center">
+                    {languagePack[language].Contacts}
+                  </Typography>
+                </a>
               </MenuItem>
             </Menu>
           </Box>
@@ -140,6 +163,11 @@ export default function NavigationBar() {
             </Button>
           </Box>
 
+          <Box sx={{ mr: 1 }}>
+            <a href="tel:+992982700005">
+              {languagePack[language].callNow}: +992982700005
+            </a>
+          </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

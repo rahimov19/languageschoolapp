@@ -52,7 +52,7 @@ body {
     background-color: #00000047;
     text-shadow: white 1px;
     border-radius: 25px;
-    width: 50%;
+    width: 100%;
     padding: 1em;
     p {
       margin-block: 0.5em;
@@ -71,9 +71,11 @@ body {
   display: flex;
   flex-direction: row !important;
   height: 100%;
+  height: 5em;
 
   div {
     width: 100%;
+
     // margin-right: 2em;
   }
   button {
@@ -233,7 +235,7 @@ body {
   justify-content: center;
   img {
     object-fit: cover;
-    // width: 100%;
+    width: 100%;
     height: 25em;
     // aspect-ratio: 1/1;
   }

@@ -81,7 +81,12 @@ export default function AboutSchool() {
   }, []);
 
   return (
-    <Container className="aboutSchoolContainer" maxWidth="false" id="aboutUs">
+    <Container
+      className="aboutSchoolContainer"
+      maxWidth="false"
+      id="aboutUs"
+      sx={{ textAlign: { xs: "center", md: "start" } }}
+    >
       <h1 className="aboutSchoolH1">{languagePack[language].WhyPot}</h1>
       <Grid container>
         <Grid xs={12} sm={12} md={6} className="right textGrid ">

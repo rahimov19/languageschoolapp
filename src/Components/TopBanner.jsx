@@ -86,73 +86,75 @@ export default function TopBanner() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <Grid xs={12} md={12} lg={12} className="gridBanner" item>
-          <h2>{languagePack[language].learnLanguage}</h2>
-          <Grid sx={{ display: "flex", alignItems: "center" }}>
-            <StarIcon sx={{ mr: 1 }} />
-            <p sx={{ textAlign: "center" }}>
-              {languagePack[language].Effective}
-            </p>
-          </Grid>
-          <Grid sx={{ display: "flex", alignItems: "center" }}>
-            <StarIcon sx={{ mr: 1 }} />
-            <p sx={{ textAlign: "center" }}>{languagePack[language].Fast}</p>
-          </Grid>{" "}
-          <Grid sx={{ display: "flex", alignItems: "center" }}>
-            <StarIcon sx={{ mr: 1 }} />
-            <p sx={{ textAlign: "center" }}>
-              {languagePack[language].Comfortable}
-            </p>
-          </Grid>
-          <Grid className="languageSelect" container>
-            <Grid xs={12} md={8} sx={{ mb: 2 }} item>
-              <FormControl
-                color="fish"
-                sx={{
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "white",
-                  },
-                  "& .MuiSvgIcon-root": {
-                    color: "white",
-                  },
-                  "& .MuiFormControl-root": {
-                    color: "white",
-                  },
-                  "& .MuiInputBase-input": {
-                    color: "white",
-                  },
-                  "& .MuiFormLabel-root": {
-                    color: "white",
-                  },
-                }}
-              >
-                <InputLabel id="demo-simple-select-label">
-                  {languagePack[language].selectLanguage}
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={selectedLanguage}
-                  label="Language"
-                  onChange={(e) => setSelectedLanguage(e.target.value)}
-                >
-                  <MenuItem value={"english"}>
-                    {languagePack[language].english}
-                  </MenuItem>
-                  <MenuItem value={"russian"}>
-                    {languagePack[language].russian}
-                  </MenuItem>
-                  <MenuItem value={"german"}>
-                    {languagePack[language].german}
-                  </MenuItem>
-                  <MenuItem value={"french"}>
-                    {languagePack[language].french}
-                  </MenuItem>
-                </Select>
-              </FormControl>
+        <Grid container>
+          <Grid xs={12} sm={12} md={10} lg={8} className="gridBanner" item>
+            <h2>{languagePack[language].learnLanguage}</h2>
+            <Grid sx={{ display: "flex", alignItems: "center" }}>
+              <StarIcon sx={{ mr: 1 }} />
+              <p sx={{ textAlign: "center" }}>
+                {languagePack[language].Effective}
+              </p>
             </Grid>
-            <Grid xs={12} md={4} item>
-              <RegistrationModal />
+            <Grid sx={{ display: "flex", alignItems: "center" }}>
+              <StarIcon sx={{ mr: 1 }} />
+              <p sx={{ textAlign: "center" }}>{languagePack[language].Fast}</p>
+            </Grid>{" "}
+            <Grid sx={{ display: "flex", alignItems: "center" }}>
+              <StarIcon sx={{ mr: 1 }} />
+              <p sx={{ textAlign: "center" }}>
+                {languagePack[language].Comfortable}
+              </p>
+            </Grid>
+            <Grid className="languageSelect" container>
+              <Grid xs={12} sm={8} item>
+                <FormControl
+                  color="fish"
+                  sx={{
+                    "& .MuiOutlinedInput-notchedOutline": {
+                      borderColor: "white",
+                    },
+                    "& .MuiSvgIcon-root": {
+                      color: "white",
+                    },
+                    "& .MuiFormControl-root": {
+                      color: "white",
+                    },
+                    "& .MuiInputBase-input": {
+                      color: "white",
+                    },
+                    "& .MuiFormLabel-root": {
+                      color: "white",
+                    },
+                  }}
+                >
+                  <InputLabel id="demo-simple-select-label">
+                    {languagePack[language].selectLanguage}
+                  </InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={selectedLanguage}
+                    label="Language"
+                    onChange={(e) => setSelectedLanguage(e.target.value)}
+                  >
+                    <MenuItem value={"english"}>
+                      {languagePack[language].english}
+                    </MenuItem>
+                    <MenuItem value={"russian"}>
+                      {languagePack[language].russian}
+                    </MenuItem>
+                    <MenuItem value={"german"}>
+                      {languagePack[language].german}
+                    </MenuItem>
+                    <MenuItem value={"french"}>
+                      {languagePack[language].french}
+                    </MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid xs={12} sm={4} sx={{ mt: { xs: 2, sm: 0 } }} item>
+                <RegistrationModal />
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

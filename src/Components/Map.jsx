@@ -15,7 +15,7 @@ export default function Map() {
     },
     English: {
       howToFind: "How to find us",
-      thatsHow: "You can find us at Rudaki ave. 155. Rudaki Plaza (5th floor)",
+      thatsHow: "You can find us at Rudaki ave. 127. Rudaki Plaza (5th floor)",
     },
   };
   const language = useSelector((state) => state.languages.currentLanguage);
