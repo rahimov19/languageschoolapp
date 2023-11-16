@@ -94,7 +94,11 @@ export default function AboutSchool() {
           <p>{languagePack[language].smallGroupsP}</p>
         </Grid>
         <Grid xs={12} sm={12} md={6} className="right ">
-          <img className="aboutSchoolImg" src="/smallGroup.jpg" alt="" />
+          <img
+            className="aboutSchoolImg"
+            src="/smallGroup.jpg"
+            alt="small groups in our school"
+          />
         </Grid>
         <Grid
           xs={12}
@@ -103,7 +107,11 @@ export default function AboutSchool() {
           className="left slide-left "
           sx={{ order: { xs: 3, md: 2 } }}
         >
-          <img className="aboutSchoolImg" src="/credit.jpg" alt="" />
+          <img
+            className="aboutSchoolImg"
+            src="/credit.jpg"
+            alt="credit payments in our school"
+          />
         </Grid>
         <Grid
           xs={12}
@@ -133,7 +141,11 @@ export default function AboutSchool() {
           className=" right"
           sx={{ order: { xs: 1, md: 3 } }}
         >
-          <img className="aboutSchoolImg" src="/native.jpg" alt="" />
+          <img
+            className="aboutSchoolImg"
+            src="/native.jpg"
+            alt="native speaker teachers"
+          />
         </Grid>
       </Grid>
     </Container>

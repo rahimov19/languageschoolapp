@@ -42,7 +42,7 @@ body {
   height: 75vh;
   background-repeat: no-repeat;
   background-size: contain;
-  display: flex !important;
+  display: flex;
   justify-content: flex-start;
   padding-left: 15% !important;
   align-items: center;
@@ -95,6 +95,9 @@ body {
 .whatIsCard {
   margin-top: 1em;
   font-size: 1.2em;
+}
+.whatIsCard h2 {
+  font-size: 1em;
 }
 .whatIsCard p {
   padding-right: 0.7em !important;
@@ -217,6 +220,7 @@ body {
   justify-content: center;
 }
 .mapGrid img {
+  border: 2px solid rgba(48, 89, 255, 0.8);
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;

@@ -19,6 +19,7 @@ export default function Footer() {
       russian: "Русский",
       english: "English",
       german: "Немецкий",
+      tajik: "Таджикский",
       french: "Французский",
       interested: "Заинтересованы?",
       pricing: "Цены",
@@ -37,6 +38,7 @@ export default function Footer() {
       aboutUs: "Дар бораи мо",
       ourValues: "Арзишҳои мо",
       languages: "Забонҳо",
+      tajik: "Тоҷики",
       russian: "Русӣ",
       english: "Англисӣ",
       german: "Олмонӣ",
@@ -61,6 +63,7 @@ export default function Footer() {
       languages: "Languages",
       russian: "Russian",
       english: "English",
+      tajik: "Tajik",
       german: "German",
       french: "French",
       interested: "Interested?",
@@ -84,7 +87,7 @@ export default function Footer() {
     >
       <Grid container>
         <Grid xs={12} className="logoFooter">
-          <img src="/logo.png" alt="" />
+          <img src="/logo.png" alt="melting pot logo" />
         </Grid>
         <Grid xs={12} md={4} lg={4}>
           <p>{languagePack[language].quote}</p>
@@ -99,10 +102,11 @@ export default function Footer() {
         <Grid xs={12} md={4} xl={2} className="footerMenu">
           <div>
             <h4> {languagePack[language].languages}</h4>{" "}
-            <a href="asd"> {languagePack[language].russian}</a>{" "}
-            <a href="asd"> {languagePack[language].english}</a>{" "}
-            <a href="asd"> {languagePack[language].german} </a>{" "}
-            <a href="asd"> {languagePack[language].french}</a>
+            <a href="#topBanner"> {languagePack[language].russian}</a>{" "}
+            <a href="#topBanner"> {languagePack[language].english}</a>{" "}
+            <a href="#topBanner"> {languagePack[language].german} </a>{" "}
+            <a href="#topBanner"> {languagePack[language].french}</a>
+            <a href="#topBanner"> {languagePack[language].tajik}</a>
           </div>
         </Grid>
         <Grid xs={12} md={4} xl={2} className="footerMenu">
@@ -126,9 +130,9 @@ export default function Footer() {
               <EmailIcon fontSize="small" /> meltingpot.school@gmail.com
             </a>{" "}
           </div>
-          <Button className="bn5" sx={{ mt: 2 }}>
+          {/* <Button className="bn5" sx={{ mt: 2 }}>
             {languagePack[language].becomeATeacher}
-          </Button>
+          </Button> */}
         </Grid>
         <Grid xs={12} md={6} lg={4} mt={2}>
           {languagePack[language].address}
@@ -144,7 +148,7 @@ export default function Footer() {
           >
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png"
-              alt=""
+              alt="instagram logo"
               className="footerSocialLogo"
             />
           </a>
@@ -154,7 +158,7 @@ export default function Footer() {
           >
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png"
-              alt=""
+              alt="facebook logo"
               className="footerSocialLogo"
             />
           </a>

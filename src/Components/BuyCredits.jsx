@@ -6,6 +6,7 @@ import {
   Typography,
   Select,
   MenuItem,
+  Button,
 } from "@mui/material";
 import "../sass/BuyCredits.css"; // Import your CSS file
 import { useSelector } from "react-redux";
@@ -17,28 +18,31 @@ const BuyCredits = () => {
       selectCredits: "Выберите кредитный пакет:",
       packagePrice: "Цена 1 кредита:",
       infoText:
-        "Приобретайте больше кредитов, чтобы сэкономить! Чем больше кредитный пакет, тем дешевле становится каждый кредит. Воспользуйтесь нашими экономичными пакетами уже сегодня.",
+        "Система кредитов позволяет посещать нашу школу независимо от расписания. Учить язык каждый день? Три раза в неделю или раз в неделю? Решать вам!",
       Credits: "Кредит(ов)",
+      button: "Приобретите свои кредиты сейчас!",
     },
     Tajik: {
       buyMore: "Зиёдатар харед, бештар захира кунед!",
       selectCredits: "Бастаи кредитиро интихоб кунед:",
       packagePrice: "Нархи 1 кредит:",
       infoText:
-        "Барои сарфаи пул қарзҳои бештар харед! Ҳар қадаре ки бастаи кредитӣ калон бошад, ҳар як кредит ҳамон қадар арзонтар мешавад. Имрўз аз бастаҳои камхарҷи мо баҳра баред.",
+        "Системаи кредитӣ ба шумо имкон медиҳад, ки новобаста аз ҷадвали худ дар мактаби мо таҳсил кунед. Ҳар рӯз забон омӯзед? Се маротиба дар як ҳафта ё як маротиба дар як ҳафта? Аз худат вобаста аст!",
       Credits: "Кредит",
+      button: "Кредитҳои худро ҳозир харед!",
     },
     English: {
       buyMore: "Buy More, Save More!",
       selectCredits: "Select Credit Package:",
       packagePrice: "Price for 1 Credit:",
       infoText:
-        "Purchase more credits to save money! The larger the credit package, the cheaper each credit becomes. Take advantage of our cost-effective packages today.",
+        "The credit system allows you to attend our school regardless of your schedule. Learn a language every day? Three times a week or once a week? It's up to you!",
       Credits: "Credits",
+      button: "Get your credits now!",
     },
   };
   const language = useSelector((state) => state.languages.currentLanguage);
-  const [selectedPackage, setSelectedPackage] = useState(1); // Default to the 1 credit package
+  const [selectedPackage, setSelectedPackage] = useState("1-5");
   const creditPackages = [
     { credits: "1-5", price: 200 },
     { credits: "5-10", price: 180 },
@@ -91,6 +95,10 @@ const BuyCredits = () => {
         <Typography paragraph className="package-info" sx={{ mt: 2 }}>
           {languagePack[language].infoText}
         </Typography>
+        <button className="bn13">
+          {" "}
+          <a href="tel:+992982700005">{languagePack[language].button}</a>{" "}
+        </button>
       </Paper>
     </Container>
   );

@@ -7,38 +7,29 @@ export default function WhatIs() {
     Russian: {
       whatIsSchool: "Что такое языковая школа Melting Pot?",
       personalExperience: "Индивидуальный опыт обучения:",
-      personalExperienceP: `"Индивидуальный подход к вашему успеху. Индивидуальное обучение языку. Индивидуальный подход к каждому студенту, индивидуальные планы занятий и отслеживание прогресса позволяют оптимизировать процесс изучения языка для достижения успеха."`,
+      personalExperienceP: `"Индивидуальный подход к вашему успеху." Помимо индивидуальных занятий, обычные занятия проходят в формате "4 ученика - 1 учитель" позволяет начать говорить на языке спустя несколько уроков.`,
       certifiedInstructors: "Сертифицированные преподаватели-носители языка:",
-      certifiedInstructorsP: `"Учитесь у профессионалов" Предоставленная команда высококвалифицированных и сертифицированных преподавателей-носителей языка, работающих в нашей школе. Обучение у экспертов в области языка дает студентам аутентичный опыт, который выходит за рамки учебников и грамматических правил."`,
+      certifiedInstructorsP: `"Учитесь у профессионалов" Специально приглашенные сертифицированные учителя-носители языка помогут преодолеть все сложности изучения нового языка.`,
       flexibleOptions: "Гибкие варианты обучения:",
-      flexibleOptionsP: `"Учитесь на своих условиях" Подчеркните гибкость ваших языковых курсов, предлагая варианты как группового, так и индивидуального обучения. Упомяните о различной продолжительности курсов и расписании, чтобы учесть особенности образа жизни и сделать изучение языка удобным для студентов в их собственном темпе"`,
+      flexibleOptionsP: `"Учитесь на своих условиях" Мы открыты с 10:00 до 22:00, что позволяет вам посещать занятия в удобное вам время, не отрываясь от важных дел`,
     },
     Tajik: {
       whatIsSchool: "Мактаби забони Melting Pot чист?",
       personalExperience: "Таҷрибаи омӯзиши фардӣ:",
-      personalExperienceP: `"Муносибати инфиродӣ ба муваффақияти шумо. Омӯзиши забони инфиродӣ. Муносибати инфиродӣ ба ҳар як донишҷӯ, нақшаҳои дарсҳои инфиродӣ ва пайгирии пешрафт ба шумо имкон медиҳанд, ки раванди омӯзиши забонро барои муваффақ шудан ба муваффақият оптимизатсия кунед."`,
+      personalExperienceP: `"Муносибати инфиродӣ ба муваффақияти шумо." Илова ба дарсҳои инфиродӣ, дарсҳои муқаррарӣ дар формати «4 донишҷӯ - 1 муаллим» гузаронида мешаванд, ки имкон медиҳад, ки пас аз чанд дарс ба забон гуфтан оғоз кунед.`,
       certifiedInstructors: "Муаллимони сертификатсияшудаи забони модарӣ:",
-      certifiedInstructorsP: `"Аз мутахассисон омӯзед" Аз ҷониби як гурӯҳи муаллимони баландихтисос ва сертификатсияшудаи забони модарӣ, ки дар мактаби мо кор мекунанд. Омӯзиш аз мутахассисони забон ба донишҷӯён таҷрибаи аслӣ медиҳад, ки аз доираи китобҳои дарсӣ ва қоидаҳои грамматикӣ берунтар аст."`,
+      certifiedInstructorsP: `"Аз мутахассисон омӯзед" Муаллимони махсус даъватшудаи забони модарии сертификатсияшуда ба шумо дар бартараф кардани тамоми душвориҳои омӯзиши забони нав кӯмак хоҳанд кард.`,
       flexibleOptions: "Имкониятҳои омӯзиши чандир:",
-      flexibleOptionsP: `"Бо шартҳои худ омӯзед" Бо пешниҳоди имконоти омӯзиши гурӯҳӣ ва хусусӣ ба чандирии курсҳои забонии худ таъкид кунед. Давомнокии курсҳо ва ҷадвалҳои гуногуни курсҳоро барои қонеъ кардани эҳтиёҷоти тарзи зиндагӣ қайд кунед ва ба донишҷӯён бо суръати худ омӯхтани забонро осон созед."`,
+      flexibleOptionsP: `"Бо шартҳои худ омӯзед" Мо аз соати 10:00 то 22:00 кушодаем, ки ба шумо имкон медиҳад, ки дар вақти бароятон қулай бидуни халалдор кардани масъалаҳои муҳим ба дарсҳо ҳозир шавед."`,
     },
     English: {
       whatIsSchool: "What is Melting Pot Language School?",
       personalExperience: "Personalized Learning Experience:",
-      personalExperienceP: `"Tailored to Your Success" Highlight your school's commitment to
-        providing personalized language instruction. Individualized attention each student receives, custom-tailored
-        lesson plans, and progress tracking to ensure their language
-        learning journey is optimized for success."`,
+      personalExperienceP: `"A personalized approach to your success." In addition to individualized lessons, regular classes are held in a "4 students - 1 teacher" format allowing you to start speaking the language after a few lessons.`,
       certifiedInstructors: "Certified Native Instructors:",
-      certifiedInstructorsP: `"Learn from the Pros" Showcase your school's team of highly
-        qualified and certified native-speaking instructors. Learning from experts in the language offers students an authentic,
-        immersive experience that goes beyond textbooks and grammar rules."`,
+      certifiedInstructorsP: `"Learn from the Professionals" Specially invited certified native speaker teachers will help you overcome all the challenges of learning a new language.`,
       flexibleOptions: "Flexible Learning Options:",
-      flexibleOptionsP: `"Learn on Your Terms" Highlight the flexibility of your language
-        courses, offering options for both group and individual learning.
-        Mention varied course lengths and schedules to accommodate different
-        lifestyles, making it convenient for students to pursue language
-        learning at their own pace."`,
+      flexibleOptionsP: `Learn on your own terms" We are open from 10:00 am to 10:00 pm, allowing you to attend classes at your convenience without taking time away from important business`,
     },
   };
   const language = useSelector((state) => state.languages.currentLanguage);
@@ -57,8 +48,8 @@ export default function WhatIs() {
           md={4}
           className="whatIsCard animate glow delay-1"
         >
-          <img src="/individual.jpg" alt="cardImage" />
-          <h4>{languagePack[language].personalExperience}</h4>
+          <img src="/individual.jpg" alt="individual lessons" />
+          <h2>{languagePack[language].personalExperience}</h2>
           <p>{languagePack[language].personalExperienceP}</p>
         </Grid>
         <Grid
@@ -67,8 +58,8 @@ export default function WhatIs() {
           md={4}
           className="whatIsCard animate glow delay-2"
         >
-          <img src="/native2.jpg" alt="cardImage" />
-          <h4>{languagePack[language].certifiedInstructors}</h4>
+          <img src="/native2.jpg" alt="native speaker teachers" />
+          <h2>{languagePack[language].certifiedInstructors}</h2>
           <p>{languagePack[language].certifiedInstructorsP}</p>
         </Grid>
         <Grid
@@ -77,8 +68,8 @@ export default function WhatIs() {
           md={4}
           className="whatIsCard animate glow delay-3"
         >
-          <img src="/smallGroup2.jpg" alt="cardImage" />
-          <h4>{languagePack[language].flexibleOptions}</h4>
+          <img src="/smallGroup2.jpg" alt="small groups" />
+          <h2>{languagePack[language].flexibleOptions}</h2>
           <p>{languagePack[language].flexibleOptionsP}</p>
         </Grid>
       </Grid>

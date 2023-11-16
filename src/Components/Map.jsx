@@ -20,7 +20,7 @@ export default function Map() {
   };
   const language = useSelector((state) => state.languages.currentLanguage);
   return (
-    <Container maxWidth={false} className="mapContainer">
+    <Container maxWidth={false} className="mapContainer" id="map">
       <Grid>
         <h2>{languagePack[language].howToFind}</h2>
       </Grid>
@@ -34,7 +34,7 @@ export default function Map() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/map.png" alt="map" />
+            <img src="/map.png" alt="map to our school" />
           </a>
         </Grid>
       </Grid>

@@ -22,19 +22,22 @@ export default function NavigationBar() {
       aboutUs: "О Нас",
       Prices: "Цены",
       Contacts: "Контакты",
-      callNow: "Позвоните нам",
+      map: "Где мы находимся",
+      callNow: "Инфо",
     },
     Tajik: {
       aboutUs: "Дар бораи Мо",
+      map: "Мо дар куҷостем",
       Prices: "Нарххо",
       Contacts: "Тамос",
-      callNow: "Ба мо занг занед",
+      callNow: "Маълумот",
     },
     English: {
       aboutUs: "About Us",
+      map: "Where to find us",
       Prices: "Prices",
       Contacts: "Contact Us",
-      callNow: "Call us",
+      callNow: "Info",
     },
   };
   const dispatch = useDispatch();
@@ -66,7 +69,7 @@ export default function NavigationBar() {
     <AppBar position="sticky" className="navbar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src="/logo.png" alt="" className="logoNavbar" />
+          <img src="/logo.png" alt="melting pot logo" className="logoNavbar" />
           <Typography
             variant="h6"
             noWrap
@@ -127,6 +130,14 @@ export default function NavigationBar() {
                 </a>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu} className="navbar_items">
+                <a href="#map">
+                  {" "}
+                  <Typography textAlign="center">
+                    {languagePack[language].map}
+                  </Typography>
+                </a>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} className="navbar_items">
                 <a href="#footer">
                   <Typography textAlign="center">
                     {languagePack[language].Contacts}
@@ -152,6 +163,14 @@ export default function NavigationBar() {
               sx={{ my: 2, display: "block" }}
             >
               {languagePack[language].Prices}
+            </Button>{" "}
+            <Button
+              onClick={handleCloseNavMenu}
+              className="navbar_items"
+              href="#map"
+              sx={{ my: 2, display: "block" }}
+            >
+              {languagePack[language].map}
             </Button>{" "}
             <Button
               onClick={handleCloseNavMenu}

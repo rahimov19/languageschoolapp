@@ -175,7 +175,7 @@ export default function Faq() {
         >
           <img
             src="https://www.wgu.edu/content/dam/web-sites/blog-newsroom/blog/images/national/2022/portrait-of-female-teacher-in-classroom.png"
-            alt=""
+            alt="frequently asked questions"
           />
         </Grid>
       </Grid>

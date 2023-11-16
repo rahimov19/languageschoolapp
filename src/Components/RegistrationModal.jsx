@@ -42,6 +42,7 @@ export default function RegistrationModal() {
       email: "Электронная почта",
       english: "Английский",
       russian: "Русский",
+      tajik: "Таджикский",
       german: "Немецкий",
       french: "Французский",
     },
@@ -57,6 +58,7 @@ export default function RegistrationModal() {
       email: "Почтаи электронӣ",
       english: "Англисй",
       russian: "Русй",
+      tajik: "Тоҷики",
       german: "Олмонй",
       french: "Фаронсавй",
     },
@@ -72,6 +74,7 @@ export default function RegistrationModal() {
       email: "Email",
       english: "English",
       russian: "Russian",
+      tajik: "Tajik",
       german: "German",
       french: "French",
     },
@@ -229,6 +232,9 @@ export default function RegistrationModal() {
                   </MenuItem>
                   <MenuItem value={"French"}>
                     {languagePack[language].french}
+                  </MenuItem>
+                  <MenuItem value={"French"}>
+                    {languagePack[language].tajik}
                   </MenuItem>
                 </Select>
               </FormControl>
