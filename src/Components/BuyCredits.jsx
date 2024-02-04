@@ -6,7 +6,6 @@ import {
   Typography,
   Select,
   MenuItem,
-  Button,
 } from "@mui/material";
 import "../sass/BuyCredits.css"; // Import your CSS file
 import { useSelector } from "react-redux";
@@ -14,41 +13,42 @@ import { useSelector } from "react-redux";
 const BuyCredits = () => {
   const languagePack = {
     Russian: {
-      buyMore: "Покупайте больше, экономьте больше!",
-      selectCredits: "Выберите кредитный пакет:",
-      packagePrice: "Цена 1 кредита:",
+      buyMore: "Новая система оплаты занятий:",
+      packagePrice: "Цена за 1 занятие:",
       infoText:
-        "Система кредитов позволяет посещать нашу школу независимо от расписания. Учить язык каждый день? Три раза в неделю или раз в неделю? Решать вам!",
-      Credits: "Кредит(ов)",
-      button: "Приобретите свои кредиты сейчас!",
+        "Каждое приобретенное занятие гарантирует вам его посещение вне зависимо от времени, дня и языка",
+      button: "Начните свое первое занятие сейчас!",
+      group: "1 Групповое занятие",
+      individual: "1 Индивидуальное занятие",
     },
     Tajik: {
-      buyMore: "Зиёдатар харед, бештар захира кунед!",
-      selectCredits: "Бастаи кредитиро интихоб кунед:",
-      packagePrice: "Нархи 1 кредит:",
+      buyMore: "Системаи нави пардохт барои дарсҳо:",
+      packagePrice: "Нарх барои 1 дарс:",
       infoText:
-        "Системаи кредитӣ ба шумо имкон медиҳад, ки новобаста аз ҷадвали худ дар мактаби мо таҳсил кунед. Ҳар рӯз забон омӯзед? Се маротиба дар як ҳафта ё як маротиба дар як ҳафта? Аз худат вобаста аст!",
-      Credits: "Кредит",
-      button: "Кредитҳои худро ҳозир харед!",
+        "Ҳар як дарси харидашуда ба шумо новобаста аз вақт, рӯз ва забон иштирок карданро кафолат медиҳад",
+      button: "Дарси аввалини худро ҳозир оғоз кунед!",
+      group: "1 Дарси гурӯҳи",
+      individual: "1 дарси инфиродӣ",
     },
     English: {
-      buyMore: "Buy More, Save More!",
-      selectCredits: "Select Credit Package:",
-      packagePrice: "Price for 1 Credit:",
+      buyMore: "New payment system for classes:",
+      packagePrice: "Price for 1 lesson:",
       infoText:
-        "The credit system allows you to attend our school regardless of your schedule. Learn a language every day? Three times a week or once a week? It's up to you!",
-      Credits: "Credits",
-      button: "Get your credits now!",
+        "Each lesson purchased guarantees you attendance regardless of time, day or language",
+      button: "Start your first lesson now!",
+      group: "1 Group lesson",
+      individual: "1 Individual lesson",
     },
   };
   const language = useSelector((state) => state.languages.currentLanguage);
-  const [selectedPackage, setSelectedPackage] = useState("1-5");
+  const [selectedPackage, setSelectedPackage] = useState("group");
   const creditPackages = [
-    { credits: "1-5", price: 200 },
-    { credits: "5-10", price: 180 },
-    { credits: "10-20", price: 150 },
-    { credits: "20-50", price: 120 },
-    { credits: "50+", price: 100 },
+    { credits: "group", price: 100, name: languagePack[language].group },
+    {
+      credits: "individual",
+      price: 200,
+      name: languagePack[language].individual,
+    },
   ];
 
   const handleChange = (event) => {
@@ -78,7 +78,7 @@ const BuyCredits = () => {
             >
               {creditPackages.map((packageItem) => (
                 <MenuItem key={packageItem.credits} value={packageItem.credits}>
-                  {`${packageItem.credits} ${languagePack[language].Credits}`}
+                  {`${packageItem.name}`}
                 </MenuItem>
               ))}
             </Select>
